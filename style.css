@@ -17,4 +17,8 @@ nav {
 }
 .navigation li:first-child {
   margin: 0;
+}
+.navigation li a {
+  text-decoration: none;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
