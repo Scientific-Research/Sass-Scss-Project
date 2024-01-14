@@ -32,4 +32,26 @@ nav::after {
 
 .button {
   float: right;
+}
+.button .btn-main:link,
+.button .btn-hot:link {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 150px;
+}
+.button .btn-main:link {
+  background-color: #f08a5d;
+}
+.button .btn-main:hover {
+  background-color: #ea5717;
+}
+.button .btn-hot:link {
+  background-color: #b83b5e;
+}
+.button .btn-hot:hover {
+  background-color: #cb5b7b;
 }/*# sourceMappingURL=style.css.map */
