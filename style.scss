@@ -11,6 +11,14 @@ $color-text-dark: #333;
 nav {
   margin: 30px;
   background-color: $color-primary;
+
+  // after adding float to right and left, the color will be gone!
+  // that's why we use this below - & means nav
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 }
 
 .navigation {
