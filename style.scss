@@ -6,6 +6,7 @@
 $color-primary: #ebda1d; // yellow color
 $color-secondary: #f08a5d; // orange color
 $color-tertiary: #b83b5e; // pink
+$color-text-dark: #333;
 
 nav {
   margin: 30px;
@@ -14,6 +15,7 @@ nav {
 
 .navigation {
   list-style: none;
+  float: left;
 
   li {
     display: inline-block;
@@ -24,9 +26,14 @@ nav {
       margin: 0;
     }
     // .navigation li a {}
-    a {
+    a:link {
       text-decoration: none;
       text-transform: uppercase;
+      color: $color-text-dark;
     }
   }
+}
+
+.button {
+  float: right;
 }

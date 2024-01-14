@@ -10,6 +10,7 @@ nav {
 
 .navigation {
   list-style: none;
+  float: left;
 }
 .navigation li {
   display: inline-block;
@@ -18,7 +19,12 @@ nav {
 .navigation li:first-child {
   margin: 0;
 }
-.navigation li a {
+.navigation li a:link {
   text-decoration: none;
   text-transform: uppercase;
+  color: #333;
+}
+
+.button {
+  float: right;
 }/*# sourceMappingURL=style.css.map */
