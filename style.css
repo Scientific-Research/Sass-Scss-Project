@@ -42,6 +42,7 @@ nav::after {
   text-decoration: none;
   text-transform: uppercase;
   width: 150px;
+  color: #eee;
 }
 .button .btn-main:link {
   background-color: #f08a5d;

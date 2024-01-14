@@ -7,6 +7,7 @@ $color-primary: #ebda1d; // yellow color
 $color-secondary: #f08a5d; // orange color
 $color-tertiary: #b83b5e; // pink
 $color-text-dark: #333; // black
+$color-text-light: #eee; // white
 
 $width-button: 150px;
 
@@ -56,6 +57,7 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     width: $width-button;
+    color: $color-text-light;
   }
 
   .btn-main {
@@ -69,6 +71,7 @@ nav {
       background-color: darken($color-secondary, 15%);
     }
   }
+
   .btn-hot {
     // .btn-main:link
     &:link {
