@@ -33,8 +33,7 @@ nav::after {
 .button {
   float: right;
 }
-.button .btn-main,
-.button .btn-hot {
+.button .btn-hot, .button .btn-main {
   padding: 10px;
   display: inline-block;
   text-align: center;

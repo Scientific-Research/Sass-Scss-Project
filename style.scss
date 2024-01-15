@@ -79,10 +79,7 @@ nav {
 .button {
   float: right;
 
-  // .btn-main:link,
-  // .btn-hot:link {
-  .btn-main,
-  .btn-hot {
+  %btn-placeholder {
     padding: 10px;
     display: inline-block;
     text-align: center;
@@ -95,8 +92,17 @@ nav {
     // color: $color-text-light;;
   }
 
+  // .btn-main:link,
+  // .btn-hot:link {
+  // we remove this two here and use @extend to follow DRY rules!
+  // .btn-main,
+  // .btn-hot {
+
+  // }
+
   .btn-main {
     // .btn-main:link
+    @extend %btn-placeholder;
     &:link {
       background-color: $color-secondary;
     }
@@ -108,6 +114,7 @@ nav {
   }
 
   .btn-hot {
+    @extend %btn-placeholder;
     // .btn-main:link
     &:link {
       background-color: $color-tertiary;
