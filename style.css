@@ -27,7 +27,7 @@ nav::after {
 .navigation li a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #eee;
+  color: #333;
 }
 
 .button {

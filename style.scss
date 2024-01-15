@@ -19,10 +19,15 @@ $width-button: 150px;
   }
 }
 
-@mixin style-link-text {
+@mixin style-link-text($color) {
   text-decoration: none;
   text-transform: uppercase;
-  color: $color-text-light;
+  // color: $color-text-light;
+  color: $color;
+}
+
+@function divide($a, $b) {
+  @return $a / $b;
 }
 
 // .navigation li:nth-child(1) a {
@@ -30,7 +35,10 @@ $width-button: 150px;
 // }
 
 nav {
-  margin: 30px;
+  // margin: 30px;
+
+  // margin: divide(60, 2) * 1px;
+  margin: divide(60px, 2); // 30px
   background-color: $color-primary;
 
   // after adding float to right and left, the color will be gone!
@@ -52,9 +60,11 @@ nav {
       margin: 0;
     }
     // .navigation li a {}
+    // a:link {
     a {
       // color: red;
-      @include style-link-text;
+      // @include style-link-text;
+      @include style-link-text($color-text-dark);
       // text-decoration: none;
       // text-transform: uppercase;
       // color: $color-text-dark;
@@ -69,6 +79,8 @@ nav {
 .button {
   float: right;
 
+  // .btn-main:link,
+  // .btn-hot:link {
   .btn-main,
   .btn-hot {
     padding: 10px;
@@ -77,7 +89,7 @@ nav {
     border-radius: 100px;
     width: $width-button;
 
-    @include style-link-text;
+    @include style-link-text($color-text-light);
     // text-decoration: none;
     // text-transform: uppercase;
     // color: $color-text-light;;
