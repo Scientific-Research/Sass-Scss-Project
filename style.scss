@@ -11,17 +11,32 @@ $color-text-light: #eee; // white
 
 $width-button: 150px;
 
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin style-link-text {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-text-light;
+}
+
+// .navigation li:nth-child(1) a {
+//   color: rgb(218, 237, 218);
+// }
+
 nav {
   margin: 30px;
   background-color: $color-primary;
 
   // after adding float to right and left, the color will be gone!
   // that's why we use this below - & means nav
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+
+  @include clearfix;
 }
 
 .navigation {
@@ -37,27 +52,35 @@ nav {
       margin: 0;
     }
     // .navigation li a {}
-    a:link {
-      text-decoration: none;
-      text-transform: uppercase;
-      color: $color-text-dark;
+    a {
+      // color: red;
+      @include style-link-text;
+      // text-decoration: none;
+      // text-transform: uppercase;
+      // color: $color-text-dark;
     }
+
+    // .navigation li:nth-child(1) a {
+    //   color: rgb(218, 237, 218);
+    // }
   }
 }
 
 .button {
   float: right;
 
-  .btn-main:link,
-  .btn-hot:link {
+  .btn-main,
+  .btn-hot {
     padding: 10px;
     display: inline-block;
     text-align: center;
     border-radius: 100px;
-    text-decoration: none;
-    text-transform: uppercase;
     width: $width-button;
-    color: $color-text-light;
+
+    @include style-link-text;
+    // text-decoration: none;
+    // text-transform: uppercase;
+    // color: $color-text-light;;
   }
 
   .btn-main {
